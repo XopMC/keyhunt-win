@@ -1,4 +1,4 @@
--------- English ---------
+# -------- English ---------
 # Compiled keyhunt for Win
 # Version 0.2.211007 Chocolate ¡Beta!
 https://github.com/albertobsd/keyhunt
@@ -15,7 +15,7 @@ all tests completed successfully
 
 Thanks AlbertoBSD for his job!
 
--------- Russian ---------
+# -------- Russian ---------
 # Скомпилированный keyhunt для Win
 # Версия 0.2.211007 Chocolate ¡Beta!
 https://github.com/albertobsd/keyhunt
@@ -31,4 +31,4 @@ https://github.com/albertobsd/keyhunt
 
 Спасибо AlbertoBSD за его работу!
 
----------------------------
+# ---------------------------
