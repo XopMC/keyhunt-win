@@ -7,7 +7,7 @@ https://github.com/albertobsd/keyhunt
 # Added "Useful" folder with Keysubtracter for xpoint mode, b58dec/RMD160-Sort for converting base58 to RMD160 and sorting it
 # Added orginal keyhunt's documentation in "Doc"
 
-by @XopMC for t.me/brythbit
+by @XopMC for https://t.me/brythbit
 
 all tests completed successfully
 
