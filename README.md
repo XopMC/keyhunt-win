@@ -24,7 +24,7 @@ https://github.com/albertobsd/keyhunt
 # Добавлена папка "Useful" с Keysubtracter для режима xpoint, и b58dec/RMD160-Sort для конвертации и сортировки base58 в RMD160
 # Добавлена оригинальная документация в "Doc"
 
-Скомпилировал @XopMC для t.me/brythbit
+Скомпилировал @XopMC для https://t.me/brythbit
 
 Тесты программа прошла успешно
 ![Снимок](https://user-images.githubusercontent.com/89750173/136857976-1d523706-c65d-45e8-bd4e-8e5e5aa8ecb0.JPG)
