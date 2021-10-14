@@ -1,3 +1,4 @@
+# donat: bc1qlwcaxwnp2ulndlppdc0wvkdz7ly2npfuz6ny0a
 # -------- English ---------
 # Compiled keyhunt for Win
 # Version 0.2.211007 Chocolate ¡Beta!
