@@ -1,4 +1,4 @@
-# donat: bc1qlwcaxwnp2ulndlppdc0wvkdz7ly2npfuz6ny0a
+
 # -------- English ---------
 # Compiled keyhunt for Win
 # Version 0.2.211007 Chocolate ¡Beta!
@@ -31,5 +31,7 @@ https://github.com/albertobsd/keyhunt
 ![Снимок](https://user-images.githubusercontent.com/89750173/136857976-1d523706-c65d-45e8-bd4e-8e5e5aa8ecb0.JPG)
 
 Спасибо AlbertoBSD за его работу!
-
 # ---------------------------
+
+
+donation: bc1qlwcaxwnp2ulndlppdc0wvkdz7ly2npfuz6ny0a
