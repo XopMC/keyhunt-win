@@ -1,7 +1,7 @@
 
 # -------- English ---------
 # Compiled keyhunt for Win
-# Version 0.2.211007 Chocolate ¡Beta!
+# Version 0.2.211012 Chocolate ¡Beta!
 https://github.com/albertobsd/keyhunt
 
 # Added original "tests" folder
@@ -18,7 +18,7 @@ Thanks AlbertoBSD for his job!
 
 # -------- Russian ---------
 # Скомпилированный keyhunt для Win
-# Версия 0.2.211007 Chocolate ¡Beta!
+# Версия 0.2.211012 Chocolate ¡Beta!
 https://github.com/albertobsd/keyhunt
 
 # Добавлена оригинальная папка "tests"
