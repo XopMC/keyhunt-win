@@ -33,5 +33,13 @@ https://github.com/albertobsd/keyhunt
 Спасибо AlbertoBSD за его работу!
 # ---------------------------
 
+##Donations
 
-donation: bc1qlwcaxwnp2ulndlppdc0wvkdz7ly2npfuz6ny0a
+Donation (Me) : bc1qlwcaxwnp2ulndlppdc0wvkdz7ly2npfuz6ny0a
+
+Donations (Alberto)
+
+- BTC: 1Coffee1jV4gB5gaXfHgSHDz9xx9QSECVW
+- ETH: 0x6222978c984C22d21b11b5b6b0Dd839C75821069
+- DOGE: DKAG4g2HwVFCLzs7YWdgtcsK6v5jym1ErV
+- BCB: bcb_3rf4pzhrdeziygir8t5pmep4xdwqwyk1xgmytzyo991gdez1sgq1ehb3a8jh
