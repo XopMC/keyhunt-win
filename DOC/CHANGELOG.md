@@ -1,3 +1,28 @@
+# 0.2.211117 SSE Trick or treat ¡Beta!
+- Minikeys new sequential generator and x2 times more speed
+- third bloom filter check for bsgs 20% less memory usage
+
+# Version 0.2.211031 Trick or treat ¡Beta!
+- Minikeys improvements in speed
+- Test to try solve the https://github.com/albertobsd/keyhunt/issues/139 issue
+
+# Version 0.2.211026 Chocolate ¡Beta!
+- Solved https://github.com/albertobsd/keyhunt/issues/130
+- Minikeys new generator improvements in speed
+
+# Version 0.2.211024 Chocolate ¡Beta!
+- Ethereum support
+- Double speed for rmd160 mode
+- Minikeys mode support
+- Stride option
+
+# Version 0.2.211018 Chocolate ¡Beta!
+- Solved some bugs: https://github.com/albertobsd/keyhunt/issues/122 https://github.com/albertobsd/keyhunt/issues/111
+- Files are going to be updated automatillyca 
+-- from keyhunt_bsgs_3_*.blm  to keyhunt_bsgs_4*.blm 
+-- from keyhunt_bsgs_1_*.blm  to keyhunt_bsgs_5*.blm 
+-- the program will notify you when time to delete the old files
+
 # Version 0.2.211012 Chocolate ¡Beta!
 - Fixed the slow bP table generation.
 -- This fix make obsolete the files keyhunt_bsgs_0_*.blm 

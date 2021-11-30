@@ -1,11 +1,28 @@
 # keyhunt
+
 Tool for hunt privatekeys for crypto currencies that use secp256k1  elliptic curve
 
 Post: https://bitcointalk.org/index.php?topic=5322040.0
 
-Work for btc in this moment, only legacy Addresses that start with '1'
+Work for Bitcoin
+- address compress or uncompress
+- hashes rmd160 compress or uncompress
+- publickeys compress or uncompress
 
-Ethereum addresses is a work in develop
+Work for Ethereum
+- address
+
+## Free Code
+
+This code is free of charge, see the licence for more details. https://github.com/albertobsd/keyhunt/blob/main/LICENSE
+
+This is a hobby for me but is still a lot of work.
+https://github.com/albertobsd/keyhunt#donations
+
+
+## For regulars users
+
+Please read the CHANGELOG.md to see the new changes
 
 # Download
 
@@ -20,28 +37,38 @@ don't forget change to the keyhunt directory
 `cd keyhunt`
 
 # How to build
+
 First compile:
 
-`make`
+```
+make
+```
 
 and then execute with `-h` to see the help
 
-```./keyhunt -h```
+```
+./keyhunt -h
+```
 
 
 ## ¡Beta!
-This version is still a *beta* version, there are a lot of things that can be fail. And absoluly there are some bugs 
+
+This version is still a **beta** version, there are a lot of things that can be fail. And absoluly there are some bugs 
 
 # Modes
 
-Keyhunt can work in diferents ways at different speeds.
+Keyhunt can work in diferent ways at different speeds.
+
 The current availables modes are:
 - address
 - rmd160
 - xpoint
 - bsgs
 
-you can select them with `-m`
+## Experimental modes
+
+- minikeys
+- pub2rmd
 
 ## address mode
 
@@ -118,7 +145,7 @@ address: 1EhqbyUMvvs7BfL8goY6qcPbD6YKfPqb7e
 
 In this mode you can specify to seach only address compressed or uncompressed with `-l compress` or  `-l uncompress`
 
-Test your look with the random parameter `-R` againts the puzzle #64
+Test your luck with the random parameter `-R` againts the puzzle #64
 
 ```
 ./keyhunt -m address -f tests/64.txt -b 64 -l compress -R -q -s 10
@@ -491,6 +518,7 @@ Output:
 
 
 ## pub2rmd mode
+
 This method is made to try to get the puzzles publickey key it works a little more faster because it skip the EC Operations
 
 The input file need to have the hash RMD160 of the address without publickey leaked:
@@ -772,7 +800,7 @@ OK at this point maybe you want to use ALL your RAM memory to solve the puzzle 1
 
 I already tested it with some **18 GB ** used with `-k 1024` and I get **~46 Petakeys/s per thread.**
 
-with 6 threads
+with **6** threads
 
 `./keyhunt -m bsgs -f tests/120.txt -b 120 -R -k 1024 -q -t 6`
 
@@ -947,39 +975,79 @@ To get optimal performance the k values need to be base 2^x values, this is 1,2,
 ### Valid n and k values
 
 ```
-+---------------------------+-------------+---------------------------+ 
-| bits | n in hexadecimal   | k max value | Amount of RAM with k = 1  | 
-| +-------------------------+-------------+---------------------------+ 
-| 20 | 0x100000             | 1 (default) |                           | 
-| 22 | 0x400000             | 2           |                           | 
-| 24 | 0x1000000            | 4           |                           | 
-| 26 | 0x4000000            | 8           |                           | 
-| 28 | 0x10000000           | 16          |                           |
-| 30 | 0x40000000           | 32          |                           | 
-| 32 | 0x100000000          | 64          |                           |
-| 34 | 0x400000000          | 128         |                           |
-| 36 | 0x1000000000         | 256         |                           |
-| 38 | 0x4000000000         | 512         |                           |
-| 40 | 0x10000000000        | 1024        |                           |
-| 42 | 0x40000000000        | 2048        |                           |
-| 44 | 0x100000000000       | 4096        | ~17 MB                    |
-| 46 | 0x400000000000       | 8192        | ~34 MB                    | 
-| 48 | 0x1000000000000      | 16384       |                           |
-| 50 | 0x4000000000000      | 32768       |                           | 
-| 52 | 0x10000000000000     | 65536       |                           |
-| 54 | 0x40000000000000     | 131072      |                           |
-| 56 | 0x100000000000000    | 262144      |                           | 
-| 58 | 0x400000000000000    | 524288      |                           |  
-| 60 | 0x1000000000000000   | 1048576     | ~4.5 GB                   | 
-| 62 | 0x4000000000000000   | 2097152     | ~9 GB                     | 
-+---------------------------+-------------+---------------------------+
++------+----------------------+-------------+
+| bits |  n in hexadecimal    | k max value |
++------+----------------------+-------------+
+|   20 |             0x100000 | 1 (default) |
+|   22 |             0x400000 | 2           |
+|   24 |            0x1000000 | 4           |
+|   26 |            0x4000000 | 8           |
+|   28 |           0x10000000 | 16          |
+|   30 |           0x40000000 | 32          |
+|   32 |          0x100000000 | 64          |
+|   34 |          0x400000000 | 128         |
+|   36 |         0x1000000000 | 256         |
+|   38 |         0x4000000000 | 512         |
+|   40 |        0x10000000000 | 1024        |
+|   42 |        0x40000000000 | 2048        |
+|   44 |       0x100000000000 | 4096        |
+|   46 |       0x400000000000 | 8192        |
+|   48 |      0x1000000000000 | 16384       |
+|   50 |      0x4000000000000 | 32768       |
+|   52 |     0x10000000000000 | 65536       |
+|   54 |     0x40000000000000 | 131072      |
+|   56 |    0x100000000000000 | 262144      |
+|   58 |    0x400000000000000 | 524288      |
+|   60 |   0x1000000000000000 | 1048576     |
+|   62 |   0x4000000000000000 | 2097152     |
+|   64 |  0x10000000000000000 | 4194304     |
++------+----------------------+-------------+
 ```
-
-*if you exceed the Max value of K the program can have a unknow behavior, the program can have a suboptimal performance, or in the wrong cases you can missing some hits and have an incorrect SPEED.*
-
-Of course you can use a bigger number N  like 2^64 or 2^70 if you have enough memory for it.
+ 
+**if you exceed the Max value of K the program can have a unknow behavior, the program can have a suboptimal performance, or in the wrong cases you can missing some hits and have an incorrect SPEED.**
 
 Note for user that want use it with SWAP memory. IT DON'T WORK swap memory was made to small chucks of memory also is slowly.   
+
+### What values use according to my current RAM:
+
+2 G
+-k 128
+
+4 G
+-k 256
+
+8 GB
+-k 512
+
+16 GB
+-k 1024
+
+32 GB
+-k 2048
+
+64 GB
+-n 0x100000000000 -k 4096
+
+128 GB
+-n 0x400000000000 -k 4096
+
+256 GB
+-n 0x400000000000 -k 8192
+
+512 GB
+-n 0x1000000000000 -k 8192
+
+1 TB
+-n 0x1000000000000 -k 16384
+
+2 TB
+-n 0x4000000000000 -k 16384
+
+4 TB
+-n 0x4000000000000 -k 32768
+
+8 TB
+-n 0x10000000000000 -k 32768
 
 
 ### Testing puzzle 63 bits
@@ -1035,7 +1103,7 @@ Please note that number of threads was setting to 6 but only 4 threads were used
 The next command also solve the Puzzle 63 with more threads
 
 ```
-time ./keyhunt -m bsgs -t 6 -f tests/63.pub -n 0x400000000000000 -M -s 0 -S -k 16 -b 63 -B both
+time ./keyhunt -m bsgs -t 6 -f tests/63.pub -n 0x400000000000000 -M -s 0 -S -k 8 -b 63
 ```
 
 ```
@@ -1043,6 +1111,154 @@ real    4m4.719s
 user    2m15.706s
 sys     0m13.009s
 ```
+
+## Is my speed real?
+
+Since this is still a beta version we can have some doubt about the speed showed in the bsgs mode.
+
+To check this  i prepare a set of test publickeys to be found at some specific time according to your speed.
+
+With  1 Petakeys/s the publickey will be found in 2 minutes:
+Privatekey: 8000000000000001aa535d3d0c0000
+Publickey : 02af4535880d694d660031a161c53a6889c45d2de513454858e94739f9c790768b
+
+With 10 Petakeys/s the publickey will be found in 2 minutes:
+Privatekey: 8000000000000010a741a462780000
+Publickey : 025deee1657cd5d363cff23ec1b14781e504cbb6292c273e515d73f98065131d40
+
+With 50 Petakeys/s the publickey will be found in 2 minutes:
+Privatekey: 8000000000000053444835ec580000
+Publickey : 03c13e9c6e5cbe2ac06817e4d8fd0a3e836f1a121aab91bb67ef44747b25c7d791
+
+With  1 Exakey/s the publickey will be found in 2 minutes:
+Privatekey: 800000000000068155a43676e00000
+Publickey : 022b6a74badcc4c3d8fab7d01ddc1854b9d8f262172789b2aa1bb7fd42cc1b2817
+
+With  5 Exakeys/s the publickey will be found in 2 minutes
+Privatekey: 8000000000002086ac351052600000
+Publickey : 024cf9e44f808e7b0bbb12a57ff63e3a8407cba1816f5e31e815d33d70e4a95a7f
+
+With 10 Exakeys/s the publickey will be found in 2 minutes
+Privatekey: 800000000000410d586a20a4c00000
+Publickey : 02ee0cf78d13b4aae9c8777a0f93dff7f5be3855bd2c0f85370f861c69bb5b533a
+
+Select one publickey that fit to your current speed save it in a file `testpublickey.txt` and test it with:
+
+```
+./keyhunt -m bsgs -f testpublickey.txt -b 120 -q
+```
+
+Change the values of k, n and t
+
+
+The publickeys should be found in some 2 minutes after the load of the files
+
+Change your n or k values according to your current memory and remember not exceed the k value of each N please check the table https://github.com/albertobsd/keyhunt#valid-n-and-k-values
+
+
+## minikeys Mode
+
+This mode is some experimental.
+
+For the moment only Minikeys of 22 characters are available
+
+The minikey are generated from a 16 byte buffer using the base58 encode funtion using the bitcoin  string `123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz` any sugestion please let me know.
+
+
+Command example:
+
+```
+./keyhunt -m minikeys -f minkey_h160.txt -C SG64GZqySYwBm9KxE1wJ28 -n 0x10000
+```
+
+Output:
+
+```
+[+] Version 0.2.211117 SSE Trick or treat ¡Beta!, developed by AlbertoBSD
+[+] Mode minikeys
+[+] Opening file /home/albertobsd/keyhunt/minkey_h160.txt
+[+] N = 0x10000
+[+] Base Minikey : SG64GZqySYwBm9KxE1wJ28
+[+] Allocating memory for 61560 elements: 1.17 MB
+[+] Bloom filter for 61560 elements.
+[+] Loading data to the bloomfilter total: 0.21 MB
+[+] Bloomfilter completed
+[+] Sorting data ... done! 61560 values were loaded and sorted
+[+] Base minikey: SG64GZqySYwBm9KxE3QGrg?
+HIT!! Private Key: d1a4fc1f83b2f3b31dcd999acd8288ff346f7df46401596d53964e0c69d5b4d
+pubkey: 048722093a2b5dd05a84c28a18b2a6601320c9eaab9db99e76b850f9574cd3d5c987bf0c9c9ed3bd0f52124a57d9ef292b529536b225b90f8760d9c67cc3aa1c32
+minikey: SG64GZqySYwBm9KxE3wJ29
+address: 15azScMmHvFPAQfQafrKr48E9MqRRXSnVv
+^C
+```
+
+random minikeys command
+
+```
+./keyhunt -m minikeys -f ~/keyhunt/minkey_h160.txt -q -R -n 0x1000
+```
+
+```
+[+] Version 0.2.211117 SSE Trick or treat ¡Beta!, developed by AlbertoBSD
+[+] Mode minikeys
+[+] Quiet thread output
+[+] Random mode
+[+] Opening file /home/albertobsd/keyhunt/minkey_h160.txt
+[+] N = 0x1000
+[+] Allocating memory for 61560 elements: 1.17 MB
+[+] Bloom filter for 61560 elements.
+[+] Loading data to the bloomfilter total: 0.21 MB
+[+] Bloomfilter completed
+[+] Sorting data ... done! 61560 values were loaded and sorted
+^C] Total 2296832 keys in 120 seconds: 19140 keys/s
+
+```
+
+
+# Ethereum
+
+Finally ethereum address are supported, for ethereum there are no modes exect for address.
+
+if you have publickeys for ethereum you can use xpoint or bsgs mode.
+
+to test the functionality of ethereum you can use the sample file `tests/1to32.eth`
+
+command: 
+
+```
+./keyhunt -c eth -f tests/1to32.eth -r 1:100000000 -M
+```
+
+output:
+
+```
+[+] Version 0.2.211024 Chocolate ¡Beta!, developed by AlbertoBSD
+[+] Setting search for ETH adddress.
+[+] Matrix screen
+[+] Stride : 1
+[+] Opening file tests/1to32.eth
+[+] N = 0x100000000
+[+] Range
+[+] -- from : 0x1
+[+] -- to   : 0x100000000
+[+] Allocating memory for 32 elements: 0.00 MB
+[+] Bloom filter for 32 elements.
+[+] Loading data to the bloomfilter total: 0.00 MB
+[+] Bloomfilter completed
+[+] Sorting data ... done! 32 values were loaded and sorted
+Base key: 1 thread 0
+
+ Hit!!!! PrivKey: 1
+address: 0x7e5f4552091a69125d5dfcb7b8c2659029395bdf
+
+ Hit!!!! PrivKey: 3
+address: 0x6813eb9362372eef6200f3b1dbc3f819671cba69
+
+ Hit!!!! PrivKey: 7
+address: 0xd41c057fd1c78805aac12b0a94a405c0461a6fbb
+....
+```
+
 
 
 ## FAQ
@@ -1057,31 +1273,28 @@ Please check the video that i made to answer that https://youtu.be/MVby8mYNxbI
 
 - Is available for Windows?
 R: It can be compiled with mingw, also it can be executed in the Ubuntu shell for windows 10
+
 Updated: 
-Yes, thanks to @WanderingPhilosopher
+Yes thanks to @kanhavishva
+Available in: https://github.com/kanhavishva/keyhunt
+
+Also, thanks to @WanderingPhilosopher
 Available in: https://github.com/WanderingPhilosopher/keyhunt
 
 Also thanks to @XopMC
 Available in: https://github.com/XopMC/keyhunt-win
 
-- Why i need the bPfile.bin ?
-R: Usually you don't need it, but if you are going to run and stop the program several times is faster load the data from a file.
-NOTE: *bPfile.bin will discontinued in some future version, the current versios have the `-S` to SAVE the FILES or READ from IT if they already exist*
-
-- The bPfile gives me extra speed?
-R: No, is just to help to speed up a little the load process and no more, but the final speed of keys per second is going to be the same without this file.
-
 
 ## Dependencies
 - pthread
-
-Tested under Debian, Termux, Ubuntu Shell for windows 10
+Tested under Debian and WSL Ubuntu Shell for windows 10
 
 ## Thanks
 
 This program was possible thanks to 
 - IceLand
 - kanhavishva
+- JLP for part of his code
 - All the group of CryptoHunters that made this program possible
 - All the users that tested it, report bugs, requested improvements and shared his knowledge.
 
@@ -1090,4 +1303,11 @@ This program was possible thanks to
 - BTC: 1Coffee1jV4gB5gaXfHgSHDz9xx9QSECVW
 - ETH: 0x6222978c984C22d21b11b5b6b0Dd839C75821069
 - DOGE: DKAG4g2HwVFCLzs7YWdgtcsK6v5jym1ErV
-- BCB: bcb_3rf4pzhrdeziygir8t5pmep4xdwqwyk1xgmytzyo991gdez1sgq1ehb3a8jh
+
+
+All the donations will be use only for two things:
+
+- Native Windows version with 0 external dependencies.
+- Get an affordable desktop computer with decent GPU, not highend, just to start the GPU version.
+
+All the donators will have first access to the privates versions of keyhunt, direct support, custom scripts and quick bug fixes.
