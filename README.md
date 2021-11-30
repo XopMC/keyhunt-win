@@ -8,7 +8,7 @@ https://github.com/albertobsd/keyhunt
 * Added "Useful" folder with Keysubtracter for xpoint mode, b58dec/RMD160-Sort for converting base58 to RMD160 and sorting it
 * Added orginal keyhunt's documentation in "Doc"
 
-The MinGW version was compiled with a lot of code changes, I had to remove everything related to WIN64 from the code. That is, Keyhunt was going for Linux, but for Windows
+The MinGW version was compiled with a lot of code changes, I had to remove everything related to WIN64 from the code. That is, Keyhunt was compiled as for Linux, but for Windows
 
 This version works, but I'm not sure if it works correctly ...
 
@@ -35,7 +35,7 @@ https://github.com/albertobsd/keyhunt
 * Добавлена папка "Useful" с Keysubtracter для режима xpoint, и b58dec/RMD160-Sort для конвертации и сортировки base58 в RMD160
 * Добавлена оригинальная документация в "Doc"
 
-Версия MinGW была скомпилирована с большим количеством изменений кода, мне пришлось удалить из кода все, что связано с WIN64. То есть Keyhunt собирался для Linux, но для Windows
+Версия MinGW была скомпилирована с большим количеством изменений кода, мне пришлось удалить из кода все, что связано с WIN64. То есть Keyhunt собирался как для Linux, но для Windows
 
 Эта версия работает, но я не уверен, что она работает правильно ...
 
