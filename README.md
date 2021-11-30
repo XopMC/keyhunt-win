@@ -50,6 +50,9 @@ https://github.com/albertobsd/keyhunt
 ![ket hunt](https://user-images.githubusercontent.com/89750173/144014347-5694c8ca-0276-46df-9d5a-02c4882f6663.PNG)
 
 
+Буду рад любой обратной связи! 
+Telegram : @XopMC 
+
 Спасибо AlbertoBSD за его работу!
 # ---------------------------
 
