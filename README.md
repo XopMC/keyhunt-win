@@ -19,7 +19,7 @@ https://github.com/albertobsd/keyhunt
 * Added "Useful" folder with Keysubtracter for xpoint mode, b58dec/RMD160-Sort for converting base58 to RMD160 and sorting it
 
 
-Your can compile it by yourself with CYGWIN ...
+You can compile it by yourself with CYGWIN ...
 
 -M MINIKEYS mode:
 Attention! It has been experimentally found that this mode works well only on newer generation processors that support SSSE3 (SSE3S) instructions - if your processor does not support these instructions, MINIKEYS mode will exit with an "Illegal instruction" error. 
