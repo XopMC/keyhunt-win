@@ -1,7 +1,6 @@
 ----------------------------
 # Changelog  
 ## 31.12.2021  - 0.2.211222 ServerEdition
-(why 211222... i don't khow)))
 
 * Big Bug Fix - for using more than 64 GB RAM on Windows!  (Specially for servers)
   
@@ -43,7 +42,6 @@ Thanks AlbertoBSD for his job!
 ----------------------------
 # Журнал изменений
 ## 31.12.2021 - 0.2.211222 ServerEdition
-(почему 211222 ... я не знаю)))
 
 * Big Bug Fix - для использования более 64 ГБ ОЗУ в Windows! (Специально для серверов)
 
