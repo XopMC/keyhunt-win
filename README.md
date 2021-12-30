@@ -1,3 +1,15 @@
+----------------------------
+# Changelog  
+## 31.12.2021  - 0.2.211222 ServerEdition
+(why 211222... i don't khow)))
+
+* Big Bug Fix - for using more than 64 GB RAM on Windows!  (Specially for servers)
+  
+* Big thanks Dusky Kam 3 (@Kyberat) for your help and testing !!!  
+
+----------------------------
+
+
 
 # -------- English ---------
 # Compiled keyhunt for Win
@@ -6,7 +18,6 @@ https://github.com/albertobsd/keyhunt
 
 * Added original "tests" folder
 * Added "Useful" folder with Keysubtracter for xpoint mode, b58dec/RMD160-Sort for converting base58 to RMD160 and sorting it
-* Added orginal keyhunt's documentation in "Doc"
 
 The MinGW version was compiled with a lot of code changes, I had to remove everything related to WIN64 from the code. That is, Keyhunt was compiled as for Linux, but for Windows
 
@@ -26,6 +37,20 @@ all tests completed successfully
 
 Thanks AlbertoBSD for his job!
 
+
+
+
+----------------------------
+# Журнал изменений
+## 31.12.2021 - 0.2.211222 ServerEdition
+(почему 211222 ... я не знаю)))
+
+* Big Bug Fix - для использования более 64 ГБ ОЗУ в Windows! (Специально для серверов)
+
+* Большое спасибо Dusky Kam 3 (@Kyberat) за вашу помощь и тестирование !!!
+----------------------------
+
+
 # -------- Russian ---------
 # Скомпилированный keyhunt для Win
 # Версия 0.2.211117 SSE Trick or treat ¡Beta!
@@ -33,7 +58,6 @@ https://github.com/albertobsd/keyhunt
 
 * Добавлена оригинальная папка "tests"
 * Добавлена папка "Useful" с Keysubtracter для режима xpoint, и b58dec/RMD160-Sort для конвертации и сортировки base58 в RMD160
-* Добавлена оригинальная документация в "Doc"
 
 Версия MinGW была скомпилирована с большим количеством изменений кода, мне пришлось удалить из кода все, что связано с WIN64. То есть Keyhunt собирался как для Linux, но для Windows
 
