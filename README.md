@@ -12,17 +12,14 @@
 
 # -------- English ---------
 # Compiled keyhunt for Win
-# Version 0.2.211117 SSE Trick or treat ¡Beta!
+# Version 0.2.211222 ServerEdition!
 https://github.com/albertobsd/keyhunt
 
 * Added original "tests" folder
 * Added "Useful" folder with Keysubtracter for xpoint mode, b58dec/RMD160-Sort for converting base58 to RMD160 and sorting it
 
-The MinGW version was compiled with a lot of code changes, I had to remove everything related to WIN64 from the code. That is, Keyhunt was compiled as for Linux, but for Windows
 
-This version works, but I'm not sure if it works correctly ...
-
-The CYGWIN version is compiled without changing the code, everything, as Alberto wrote, works fine ...
+Your can compile it by yourself with CYGWIN ...
 
 -M MINIKEYS mode:
 Attention! It has been experimentally found that this mode works well only on newer generation processors that support SSSE3 (SSE3S) instructions - if your processor does not support these instructions, MINIKEYS mode will exit with an "Illegal instruction" error. 
@@ -51,17 +48,13 @@ Thanks AlbertoBSD for his job!
 
 # -------- Russian ---------
 # Скомпилированный keyhunt для Win
-# Версия 0.2.211117 SSE Trick or treat ¡Beta!
+# Версия 0.2.211222 ServerEdition!
 https://github.com/albertobsd/keyhunt
 
 * Добавлена оригинальная папка "tests"
 * Добавлена папка "Useful" с Keysubtracter для режима xpoint, и b58dec/RMD160-Sort для конвертации и сортировки base58 в RMD160
 
-Версия MinGW была скомпилирована с большим количеством изменений кода, мне пришлось удалить из кода все, что связано с WIN64. То есть Keyhunt собирался как для Linux, но для Windows
-
-Эта версия работает, но я не уверен, что она работает правильно ...
-
-Версия CYGWIN скомпилирована без изменения кода, все, как писал Альберто, работает отлично ...
+Вы можете скомпилировать самостоятельно, используя CYGWIN
 
 -M режим MINIKEYS :
 Внимание! Экспериментально было обнаружено, что этот режим хорошо работает только на процессорах ,более нового поколения, которые поддерживают инструкции SSSE3 (SSE3S) - если ваш процессор не поддерживает эти инструкции, режим MINIKEYS выйдет с ошибкой «Illegal instruction ».
