@@ -1,5 +1,8 @@
 ----------------------------
 # Changelog  
+## 19.05.23 - 0.2.230519
+* -Double BSGS speed for legacy version
+
 ## 31.12.2021  - 0.2.211222 ServerEdition
 
 * Big Bug Fix - for using more than 64 GB RAM on Windows!  (Specially for servers)
